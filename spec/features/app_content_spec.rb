@@ -3,7 +3,7 @@
 describe "The basic Home page", :type => :feature do
 
   it "goes to the Home page" do
-    visit root_path
+    visit root_url
     expect(page).to have_content 'Home'
 
   end
