@@ -5,6 +5,9 @@ Basic Application to try building an authentication system that implements one-c
 ## Getting Started
 * Ruby 2.1.0, Rails 4.0.4
 
+## Tutorials Referenced
+* Railstast Ep. #209: Devise (revised) - http://railscasts.com/episodes/209-devise-revised
+
 
 ## System dependencies
 * uses gem figaro to handle keys as environment variables for Twitter and Mandrill (https://github.com/laserlemon/figaro)
