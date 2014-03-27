@@ -7,7 +7,7 @@ Basic Application to try building an authentication system that implements one-c
 
 ## Tutorials Referenced
 * Railstast Ep. #209: Devise (revised) - http://railscasts.com/episodes/209-devise-revised
-
+* Railstast Ep. #235 Devise and OmniAuth (revised) - http://railscasts.com/episodes/235-devise-and-omniauth-revised
 
 ## System dependencies
 * uses gem figaro to handle keys as environment variables for Twitter and Mandrill (https://github.com/laserlemon/figaro)
