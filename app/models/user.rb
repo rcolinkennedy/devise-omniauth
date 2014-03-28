@@ -16,10 +16,8 @@ class User < ActiveRecord::Base
                           :image => omni['info']['image'],
                           :token => omni['credentials'].token,
                           :token_secret => omni['credentials'].secret)
-    
     if self.sign_in_count == 0
       import_first_auth
-      create_profile_url
     end
   end
 
@@ -41,6 +39,7 @@ class User < ActiveRecord::Base
     self.name = authentications.first.name
     self.username = authentications.first.nickname
     self.image = authentications.first.image
+    create_profile_url
   end
 
   def create_profile_url
