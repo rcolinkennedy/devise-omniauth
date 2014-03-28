@@ -1,9 +1,16 @@
 DeviseOmniauth::Application.routes.draw do
   
-  root :to => 'app_content#Home'
-  get "app_content/Home"
+  # get '/auth/twitter/callback', to: 'authentications#create'
+  # get '/auth/:provider/callback' => 'authentications#create'
 
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  # get "app_content/Home"
+
+  resources :authentications
+
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+    controllers: {omniauth_callbacks: "authentications", registrations: "registrations"}
+
+  root :to => 'app_content#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

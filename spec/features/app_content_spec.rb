@@ -8,7 +8,6 @@ describe "The basic Home page", :type => :feature do
 
   end
 
-
   # before :each do
   #   User.make(:email => 'user@example.com', :password => 'caplin')
   # end

@@ -6,7 +6,15 @@ Basic Application to try building an authentication system that implements one-c
 * Ruby 2.1.0, Rails 4.0.4
 
 ## Tutorials Referenced
+<<<<<<< HEAD
 * Railstast Ep. #209: Devise (revised) - http://railscasts.com/episodes/209-devise-revised
+=======
+* Railscasts #209 Devise (revised) (http://railscasts.com/episodes/209-devise-revised?view=asciicast)
+* Railscasts #235 OmniAuth Part 1 (http://railscasts.com/episodes/235-omniauth-part-1)
+* Railscasts #236 OmniAuth Part 2(http://railscasts.com/episodes/236-omniauth-part-2)
+* Rails – Twitter and Facebook Authentications with Omniauth and Devise 22 (http://www.orhancanceylan.com/rails-twitter-and-facebook-authentications-with-omniauth-and-devise/)
+* How to Use Omniauth to Authenticate your Users (http://code.tutsplus.com/articles/how-to-use-omniauth-to-authenticate-your-users--net-22094)
+>>>>>>> disable-turbolinks
 
 
 ## System dependencies
