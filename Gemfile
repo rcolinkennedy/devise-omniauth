@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Turbolinks for some JS
+gem 'turbolinks', '~> 2.2.1'
+
 # Foundation 5
 gem 'foundation-rails', '5.1.1.0'
 

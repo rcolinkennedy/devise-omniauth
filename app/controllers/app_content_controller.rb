@@ -1,4 +1,4 @@
 class AppContentController < ApplicationController
-  def Home
+  def home
   end
 end
