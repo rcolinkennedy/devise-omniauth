@@ -1,2 +1,18 @@
 <h1>AppContent#Home</h1>
 <p>Find me in app/views/app_content/home.html.erb</p>
+
+<% if user_signed_in? %>
+	email: <%= current_user.email %>
+	<br>
+	authentication nickname: <%= current_user.authentications.first.nickname %>
+	<br>
+	Username: <%= current_user.username %>
+	<br>
+	Profile URL: <%= current_user.profile_url %>
+	<br>
+	Sign in count: <%= current_user.sign_in_count %>
+
+
+<% else %>
+	Nobody signed in
+<% end %>

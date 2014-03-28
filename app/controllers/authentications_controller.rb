@@ -32,10 +32,10 @@ class AuthenticationsController < ApplicationController
      end 
    end
 
-  # Commenting out Destroy authentication for now.
-  # def destroy
-  #    @authentication = Authentication.find(params[:id])
-  #    @authentication.destroy
-  #    redirect_to authentications_url, :notice => "Successfully destroyed authentication."
-  #  end
+  def destroy
+     @authentication = Authentication.find(params[:id])
+     @authentication.destroy
+     redirect_to authentications_url, :notice => "Successfully destroyed authentication."
+   end
+
 end

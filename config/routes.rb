@@ -8,7 +8,7 @@ DeviseOmniauth::Application.routes.draw do
   resources :authentications
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
-    controllers: {omniauth_callbacks: "authentications", registrations: "registrations"}
+    controllers: {omniauth_callbacks: 'authentications', registrations: 'registrations'}
 
   root :to => 'app_content#home'
 

@@ -11,8 +11,16 @@ class User < ActiveRecord::Base
   def apply_omniauth(omni)
     authentications.build(:provider => omni['provider'],
                           :uid => omni['uid'],
+                          :nickname => omni['info']['nickname'],
+                          :name => omni['info']['name'],
+                          :image => omni['info']['image'],
                           :token => omni['credentials'].token,
                           :token_secret => omni['credentials'].secret)
+    
+    if self.sign_in_count == 0
+      import_first_auth
+      create_profile_url
+    end
   end
 
   def password_required?
@@ -25,6 +33,18 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  private
+
+  def import_first_auth
+    self.name = authentications.first.name
+    self.username = authentications.first.nickname
+    self.image = authentications.first.image
+  end
+
+  def create_profile_url
+    self.profile_url = '@' + username.downcase.strip.parameterize
   end
 
 end
