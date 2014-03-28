@@ -16,8 +16,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Turbolinks for some JS; removing.
-# gem 'turbolinks', '~> 2.2.1'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# ... and it also causes problems with Foundation, so tentative on it.
+gem 'turbolinks', '~> 2.2.1'
 
 # Foundation 5
 gem 'foundation-rails', '5.1.1.0'
