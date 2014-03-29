@@ -1,5 +1,6 @@
 DeviseOmniauth::Application.routes.draw do
   
+  get "users/show"
   # get '/auth/twitter/callback', to: 'authentications#create'
   # get '/auth/:provider/callback' => 'authentications#create'
 
@@ -21,6 +22,9 @@ DeviseOmniauth::Application.routes.draw do
       get '/me/settings', to: 'registrations#edit',   as: 'edit_user_registration'
       put '/settings', to: 'registrations#update'
     end
+
+  resources :users, :only => :show
+  get "/:profile_url", to: 'users#show', as: 'profile'
 
   root :to => 'app_content#home'
 
