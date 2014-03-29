@@ -3,7 +3,7 @@ DeviseOmniauth::Application.routes.draw do
   # get '/auth/twitter/callback', to: 'authentications#create'
   # get '/auth/:provider/callback' => 'authentications#create'
 
-  # get "app_content/Home"
+  # get "app_content/home"
 
   resources :authentications
 
