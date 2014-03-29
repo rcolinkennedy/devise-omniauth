@@ -8,7 +8,19 @@ DeviseOmniauth::Application.routes.draw do
   resources :authentications
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
-    controllers: {omniauth_callbacks: 'authentications', registrations: 'registrations'}
+    controllers: {omniauth_callbacks: 'authentications', registrations: 'registrations'},
+    skip: [:registrations]
+    as :user do
+      # signup
+      get 'register', to: 'registrations#new', as: 'new_user_registration'
+      post 'register', to: 'registrations#create', as: 'user_registration'
+      # account deletion
+      delete 'register', to: 'registrations#destroy'
+      # settings & cancellation
+      get '/cancel', to: 'registrations#cancel', as: 'cancel_user_registration'
+      get '/me/settings', to: 'registrations#edit',   as: 'edit_user_registration'
+      put '/settings', to: 'registrations#update'
+    end
 
   root :to => 'app_content#home'
 
